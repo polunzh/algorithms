@@ -9,6 +9,8 @@ bst.insert(5);
 bst.insert(10);
 bst.insert(20);
 
-// bst.preOrderTraversal(root);
+bst.preOrderTraversal(root);
+console.log('---');
+bst.preOrderTraversalRecursion(root);
 // bst.inOrderTraversal(root);
-bst.postOrderTraversal(root);
+// bst.postOrderTraversal(root);

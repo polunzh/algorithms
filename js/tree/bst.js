@@ -32,7 +32,26 @@ class BST {
     }
   }
 
-  preOrderTraversal(node) {
+  preOrderTraversal(root) {
+    const stack = [];
+
+    let node = root;
+
+    while (node !== null || stack.length > 0) {
+      while (node !== null) {
+        console.log(node.data);
+        stack.push(node);
+        node = node.left;
+      }
+
+      if (stack.length > 0) {
+        node = stack.pop();
+        node = node.right;
+      }
+    }
+  }
+
+  preOrderTraversalRecursion(node) {
     if (node !== null) {
       console.log(node.data);
       this.preOrderTraversal(node.left);
@@ -40,7 +59,7 @@ class BST {
     }
   }
 
-  inOrderTraversal(node) {
+  middleOrderTraversalRecursion(node) {
     if (node !== null) {
       this.inOrderTraversal(node.left);
       console.log(node.data);
@@ -48,7 +67,7 @@ class BST {
     }
   }
 
-  postOrderTraversal(node) {
+  postOrderTraversalRecursion(node) {
     if (node !== null) {
       this.postOrderTraversal(node.left);
       this.postOrderTraversal(node.right);
