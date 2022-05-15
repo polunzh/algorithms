@@ -10,8 +10,6 @@
 
 package algorithms
 
-import "fmt"
-
 func Duplicate(arr []int) bool {
 	length := len(arr)
 
@@ -23,7 +21,6 @@ func Duplicate(arr []int) bool {
 
 	for i := 0; i < length; i++ {
 		for arr[i] != i {
-			fmt.Println(arr[i], arr[arr[i]])
 			if arr[arr[i]] == arr[i] {
 				return true
 			}
